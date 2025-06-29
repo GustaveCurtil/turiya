@@ -67,16 +67,26 @@ footer {
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+
+    padding: 0 var(--afstand-klein);
 }
 
 footer * {
     font-size: 0.9rem;
 }
 
+@media screen and (min-width: 600px) {
+    footer { justify-content: center;} 
+}
+
+
 main div#mandala {margin: var(--afstand-groot) 0;}
 
-p {width: 100%; text-align: center; margin: var(--afstand-klein) 0;}
+p {width: 100%; text-align: left; margin: var(--afstand-klein) 0;}
+@media screen and (min-width: 600px) {
+    p { text-align: center;} 
+}
 
 div#mandala img{width: var(--breedte-mandala); -webkit-animation:spin 356s linear infinite; -moz-animation:spin 356s linear infinite; animation:spin 356s linear infinite;}
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
