@@ -2,13 +2,19 @@
 *, html { padding: 0; margin: 0; box-sizing: border-box; overscroll-behavior: none;}
 
 :root {
-    --hoogte-header: 10rem;
-    --hoogte-footer: 3rem;
+    --hoogte-header: 8rem;
+    --hoogte-footer: 2rem;
     --breedte-mandala: 14rem;
     --afstand-groot: 1.4rem;
     --afstand-klein: 0.6rem;
     --kleur-achtergrond: rgb(255, 251, 244);
     --kleur-tekst: rgb(83, 35, 1);
+}
+
+@media screen and (min-width: 600px) {
+    :root {
+        --breedte-mandala: 28rem;
+    }
 }
 
 h1 {font-size: 4rem; font-family: "Slackside One", cursive;}
@@ -30,7 +36,7 @@ header {
     
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -64,7 +70,7 @@ main {
     width: 100%;
     min-height: calc(100svh - var(--hoogte-header) - var(--hoogte-footer));
 
-    padding: 0 var(--afstand-klein);
+    padding: var(--afstand-groot) var(--afstand-klein);
     
     display: flex;
     flex-direction: column;
@@ -92,14 +98,14 @@ footer * {
 }
 
 
-main div#mandala {margin: var(--afstand-groot) 0;}
+main a#mandala {display: block; margin: var(--afstand-groot) 0;}
 
 p {width: 100%; text-align: left; margin: var(--afstand-klein) 0;}
 @media screen and (min-width: 600px) {
     p { text-align: center;} 
 }
 
-div#mandala img{width: var(--breedte-mandala); -webkit-animation:spin 356s linear infinite; -moz-animation:spin 356s linear infinite; animation:spin 356s linear infinite;}
+a#mandala img {width: var(--breedte-mandala); -webkit-animation:spin 356s linear infinite; -moz-animation:spin 356s linear infinite; animation:spin 356s linear infinite;}
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
