@@ -6,13 +6,13 @@
     --breedte-mandala: 14rem;
     --afstand-groot: 1.4rem;
     --afstand-klein: 0.4rem;
-    --kleur-achtergrond: #FFFBF4;
-    --kleur-tekst: #532301;
+    --kleur-achtergrond: rgb(255, 251, 244);
+    --kleur-tekst: rgb(83, 35, 1);
 }
 
 h1 {font-size: 4rem;}
 a {color: var(--kleur-tekst);}
-p {font-size: 1rem; line-height: 1.6rem; font-weight: 300;} 
+p {font-size: 1rem; line-height: 1.6rem;} 
 
 body {
     width: 100vw;
@@ -52,6 +52,8 @@ nav a {
 main {
     width: 100%;
     min-height: calc(100svh - var(--hoogte-header) - var(--hoogte-footer));
+
+    padding: 0 var(--afstand-klein);
     
     display: flex;
     flex-direction: column;
