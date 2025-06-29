@@ -1,10 +1,18 @@
 *, html { padding: 0; margin: 0; box-sizing: border-box; overscroll-behavior: none;}
 
 :root {
-    --hoogte-header: 6rem;
+    --hoogte-header: 8rem;
+    --hoogte-footer: 3rem;
+    --breedte-mandala: 14rem;
+    --afstand-groot: 1.2rem;
+    --afstand-klein: 0.4rem;
     --kleur-achtergrond: #FFFBF4;
     --kleur-tekst: #532301;
 }
+
+h1 {font-size: 4rem;}
+a {color: var(--kleur-tekst);}
+p {font-size: 1.1rem; line-height: 1.6rem; font-weight: 300;} 
 
 body {
     width: 100vw;
@@ -25,27 +33,46 @@ header {
     align-items: center;
 }
 
+nav {
+    width: 100%;
+    max-width: 690px;
+
+    display: flex;
+    justify-content:space-evenly;
+
+    margin-top: var(--afstand-klein);
+}
+
+nav a {
+    width: calc(100% / 3);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
 main {
     width: 100%;
-    height: calc(100svh - var(--hoogte-header));
+    min-height: calc(100svh - var(--hoogte-header) - var(--hoogte-footer));
     
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-p {
+footer {
     width: 100%;
-    text-align: center;
+    height: var(--hoogte-footer);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+main div#mandala {margin: var(--afstand-groot) 0;}
 
-img#mandala{
-    width: 300px;
-    -webkit-animation:spin 356s linear infinite;
-    -moz-animation:spin 356s linear infinite;
-    animation:spin 356s linear infinite;
-}
+p {width: 100%; text-align: center; margin: var(--afstand-klein) 0;}
+
+div#mandala img{width: var(--breedte-mandala); -webkit-animation:spin 356s linear infinite; -moz-animation:spin 356s linear infinite; animation:spin 356s linear infinite;}
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
