@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Slackside+One&display=swap');
 *, html { padding: 0; margin: 0; box-sizing: border-box; overscroll-behavior: none;}
 
 :root {
@@ -5,12 +6,12 @@
     --hoogte-footer: 3rem;
     --breedte-mandala: 14rem;
     --afstand-groot: 1.4rem;
-    --afstand-klein: 0.4rem;
+    --afstand-klein: 0.6rem;
     --kleur-achtergrond: rgb(255, 251, 244);
     --kleur-tekst: rgb(83, 35, 1);
 }
 
-h1 {font-size: 4rem;}
+h1 {font-size: 4rem; font-family: "Slackside One", cursive;}
 a {color: var(--kleur-tekst);}
 p {font-size: 1rem; line-height: 1.6rem;} 
 
@@ -33,6 +34,10 @@ header {
     align-items: center;
 }
 
+h1 a {
+    text-decoration: none;
+}
+
 nav {
     width: 100%;
     max-width: 690px;
@@ -47,6 +52,12 @@ nav a {
     width: calc(100% / 3);
     text-align: center;
     font-size: 1.1rem;
+    /* font-family: "Slackside One", cursive; */
+}
+
+nav a.actief {
+    text-decoration: none;
+    font-weight: 600;
 }
 
 main {
@@ -67,7 +78,7 @@ footer {
 
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
 
     padding: 0 var(--afstand-klein);
 }
