@@ -9,18 +9,22 @@
     --afstand-groot: 1.4rem;
     --afstand-klein: 0.6rem;
     --kleur-achtergrond: rgb(255, 251, 244);
-    --kleur-tekst: rgb(83, 35, 1);
+    --kleur-tekst: rgb(83, 53, 1);
+    --kleur-tekst2: #525137;
 }
 
 @media screen and (min-width: 600px) {
+    html {font-size: 20px;}
     :root {
         --breedte-mandala: 28rem;
     }
+
 }
 
 h1 {font-size: 4rem; font-family: "Slackside One", cursive;}
 a {color: var(--kleur-tekst);}
-p {font-size: 1rem; line-height: 1.6rem;} 
+p {font-size: 1rem; line-height: 1.2rem;} 
+
 
 body {
     width: 100vw;
@@ -41,7 +45,7 @@ body#inspiraties main {padding: 0 var(--afstand-klein)}
 body#inspiraties section:first-of-type {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 body#inspiraties section:first-of-type *:not(img) {
     padding: 0 var(--afstand-klein);
@@ -52,7 +56,6 @@ body#inspiraties section:first-of-type a {
     margin-bottom: var(--afstand-klein);
 }
 
-    
 
 header {
     width: 100%;
@@ -66,82 +69,38 @@ header {
     padding: 0 var(--afstand-klein);
 }
 
-h1 a {
-    text-decoration: none;
-}
+h1 a {text-decoration: none;color: var(--kleur-tekst2);}
 
-nav {width: 100%; max-width: var(--breedte-max); display: flex; justify-content:space-evenly;
-}
+nav {width: 100%; max-width: var(--breedte-max); display: flex; justify-content:space-evenly;}
+nav a {width: calc(100% / 3); text-align: center; font-size: 1.1rem;}
+nav a.actief {text-decoration: none; color: var(--kleur-tekst2);}
 
-nav a {
-    width: calc(100% / 3);
-    text-align: center;
-    font-size: 1.1rem;
-    /* font-family: "Slackside One", cursive; */
-}
+main {width: 100%; min-height: calc(100svh - var(--hoogte-header) - var(--hoogte-footer)); padding: var(--afstand-klein); display: flex; flex-direction: column;}
+main#landing {padding: 0 var(--afstand-klein);}
 
-nav a.actief {
-    text-decoration: none;
-    font-weight: 600;
-}
+section { width: 100%; max-width: var(--breedte-max); margin: 0 auto;}
 
-main {
-    width: 100%;
-    min-height: calc(100svh - var(--hoogte-header) - var(--hoogte-footer));
+section.vullen {min-height: calc(100svh); display: flex; flex-direction: column; justify-content: center; align-items: center;}
+section.vullen.boven {min-height: calc(100svh - var(--hoogte-header) - var(--afstand-klein));}
+section.vullen.beneden {min-height: calc(100svh - var(--hoogte-footer) - var(--afstand-klein));}
 
-    padding: var(--afstand-klein);
-}
-
-@media screen and (min-width: 690px) {
-    main { padding: var(--afstand-groot) var(--afstand-klein);}
-}
-
-main#landing {
-    padding: 0 var(--afstand-klein);
-}
-
-main section.vullen {
-    min-height: calc(100svh);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-main section.vullen.boven {min-height: calc(100svh - var(--hoogte-header));}
-main section.vullen.beneden {min-height: calc(100svh - var(--hoogte-footer));}
-
-section#mandala a {display: flex; margin: var(--afstand-groot) 0; justify-content: center;}
+section#mandala {display: flex; justify-content: center; align-items: center;}
+section#mandala a { border-radius: 50%; display: block; width: var(--breedte-mandala); height: var(--breedte-mandala);}
+section#mandala a {position: relative; margin: var(--afstand-groot) 0; cursor: url('/lotus.cur'), auto;}
+section#mandala a {cursor: url('/lotus.cur'), auto;}
+section#mandala a>img {position: absolute;}
+section#mandala a>img:last-of-type{ width: var(--breedte-mandala); height: var(--breedte-mandala); z-index: -10; padding: var(--afstand-klein); border-radius: 100%; opacity: 0; transition: opacity 1s ease-out;}
+section#mandala a:hover>img:last-of-type {opacity: 0.5; transition: opacity 3s ease-in;}
 
 section.afbeelding {width: 100%; display: flex; justify-content: center;}
 
 p {width: 100%; text-align: left; margin: var(--afstand-klein) 0;}
-@media screen and (min-width: 600px) {
-    section {max-width: var(--breedte-max); margin: 0 auto;}
-    p { text-align: center;} 
-}
+section.centreren p {text-align: center;}
 
-section#mandala a img {width: var(--breedte-mandala); -webkit-animation:spin 356s linear infinite; -moz-animation:spin 356s linear infinite; animation:spin 356s linear infinite;}
+section#mandala a>img {width: var(--breedte-mandala); -webkit-animation:spin 356s linear infinite; -moz-animation:spin 356s linear infinite; animation:spin 356s linear infinite; border-radius: 50%;}
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-footer {
-    width: 100%;
-    height: var(--hoogte-footer);
-
-    display: flex;
-    align-items: center;
-
-    padding: 0 var(--afstand-klein);
-}
-
-footer p {
-    font-size: 0.9rem;
-    text-align: center;
-    font-weight: 300;
-}
-
-@media screen and (min-width: 600px) {
-    footer { justify-content: center;} 
-}
+footer {width: 100%; max-width: var(--breedte-max); height: var(--hoogte-footer); margin: 0 auto; display: flex; align-items: center; padding: 0 var(--afstand-klein);}
+footer p { font-size: 0.9rem; text-align: center; font-weight: 300;}
