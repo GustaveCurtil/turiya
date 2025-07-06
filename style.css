@@ -22,9 +22,10 @@
 }
 
 h1 {font-size: 4rem; font-family: "Slackside One", cursive;}
-a {color: var(--kleur-tekst);}
+a:not(.actief) {color: var(--kleur-tekst2); cursor: url('/lotus.cur'), auto;}
+a:not(h1 a, .actief), span.kleur {animation: gloeien 3s linear infinite alternate;}
 p {font-size: 1rem; line-height: 1.2rem;} 
-
+@keyframes gloeien { 100% { color: rgb(0, 6, 34); } }
 
 body {
     width: 100vw;
@@ -41,7 +42,6 @@ body#inspiraties section:not(.vullen) {padding: var(--afstand-klein);}
 body#inspiraties h1 {padding: 0 var(--afstand-klein);}
 body#inspiraties nav a {width: auto;}
 body#inspiraties nav {width: auto; padding: var(--afstand-klein); margin: var(--afstand-klein);}
-body#inspiraties main {padding: 0 var(--afstand-klein)}
 body#inspiraties section:first-of-type {
     display: flex;
     flex-direction: column;
@@ -69,11 +69,11 @@ header {
     padding: 0 var(--afstand-klein);
 }
 
-h1 a {text-decoration: none;color: var(--kleur-tekst2);}
+h1 a {text-decoration: none; color: var(--kleur-tekst2);}
 
 nav {width: 100%; max-width: var(--breedte-max); display: flex; justify-content:space-evenly;}
 nav a {width: calc(100% / 3); text-align: center; font-size: 1.1rem;}
-nav a.actief {text-decoration: none; color: var(--kleur-tekst2);}
+a.actief {text-decoration: none; color: var(--kleur-tekst2); cursor:default; pointer-events: none;}
 
 main {width: 100%; min-height: calc(100svh - var(--hoogte-header) - var(--hoogte-footer)); padding: var(--afstand-klein); display: flex; flex-direction: column;}
 main#landing {padding: 0 var(--afstand-klein);}
@@ -86,8 +86,7 @@ section.vullen.beneden {min-height: calc(100svh - var(--hoogte-footer) - var(--a
 
 section#mandala {display: flex; justify-content: center; align-items: center;}
 section#mandala a { border-radius: 50%; display: block; width: var(--breedte-mandala); height: var(--breedte-mandala);}
-section#mandala a {position: relative; margin: var(--afstand-groot) 0; cursor: url('/lotus.cur'), auto;}
-section#mandala a {cursor: url('/lotus.cur'), auto;}
+section#mandala a {position: relative; margin: var(--afstand-groot) 0;}
 section#mandala a>img {position: absolute;}
 section#mandala a>img:last-of-type{ width: var(--breedte-mandala); height: var(--breedte-mandala); z-index: -10; padding: var(--afstand-klein); border-radius: 100%; opacity: 0; transition: opacity 1s ease-out;}
 section#mandala a:hover>img:last-of-type {opacity: 0.5; transition: opacity 3s ease-in;}
