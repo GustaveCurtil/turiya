@@ -23,7 +23,7 @@
 }
 
 h1 {font-size: 4rem; font-family: "Slackside One", cursive;}
-h2 {padding-bottom: calc(var(--afstand-klein)/2); font-size: 1.4rem; color: var(--kleur-tekst2);}
+h2 {padding-bottom: calc(var(--afstand-klein)/2); font-size: 1.4rem; color: var(--kleur-tekst2); font-weight: 600;}
 a:not(.actief) {color: var(--kleur-tekst2); cursor: url('/lotus.cur'), auto;}
 a:not(h1 a, .actief), span.kleur {animation: gloeien 3s linear infinite alternate;}
 p {font-size: 1rem; line-height: 1.4rem;} 
