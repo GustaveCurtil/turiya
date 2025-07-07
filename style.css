@@ -39,12 +39,19 @@ body {
 }
 
 body#inspiraties {background-image: url(media/schors2.jpg); background-size: contain;}
+body#inspiraties main {padding: var(--afstand-klein) var(--afstand-groot);}
+body#inspiraties div#container {width: 100%; columns: 4 400px; column-gap: var(--afstand-groot);}
+body#inspiraties div#container>section {width: 100%;  break-inside: avoid;
+  page-break-inside: avoid; /* for print */
+  -webkit-column-break-inside: avoid; }
 body#inspiraties section:not(.afbeelding), body#inspiraties nav, body#inspiraties footer p {background-color: var(--kleur-achtergrond);}
-body#inspiraties section:not(.vullen) {padding: var(--afstand-klein);}
+body#inspiraties section:not(.vullen) {padding: var(--afstand-klein); margin-bottom: var(--afstand-groot);}
+body#inspiraties div#container section.afbeelding {padding: 0;}
+body#inspiraties div#container section.afbeelding img {width: 100%; max-width: 100%;}
 body#inspiraties h1 {padding: 0 var(--afstand-klein);}
 body#inspiraties nav a {width: auto;}
 body#inspiraties nav {width: auto; padding: var(--afstand-klein); margin: var(--afstand-klein);}
-body#inspiraties section:first-of-type {
+body#inspiraties>section:first-of-type {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
