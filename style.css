@@ -23,7 +23,7 @@
 }
 
 h1 {font-size: 4rem; font-family: "Slackside One", cursive;}
-h2 {padding-bottom: calc(var(--afstand-klein)/2); font-size: 1.8rem; color: var(--kleur-tekst2);}
+h2 {padding-bottom: calc(var(--afstand-klein)/2); font-size: 1.4rem; color: var(--kleur-tekst2);}
 a:not(.actief) {color: var(--kleur-tekst2); cursor: url('/lotus.cur'), auto;}
 a:not(h1 a, .actief), span.kleur {animation: gloeien 3s linear infinite alternate;}
 p {font-size: 1rem; line-height: 1.4rem;} 
@@ -83,7 +83,7 @@ main#landing {padding: 0 var(--afstand-klein);}
 section { width: 100%; max-width: var(--breedte-max); margin: 0 auto;}
 
 section.vullen {min-height: calc(100svh); display: flex; flex-direction: column; justify-content: center; align-items: center;}
-section.vullen.boven {min-height: calc(100svh - var(--hoogte-header) - var(--afstand-klein));}
+section.vullen.boven {height: calc(100svh - var(--hoogte-header) - var(--afstand-klein)); min-height: auto;}
 section.vullen.beneden {min-height: calc(100svh - var(--hoogte-footer) - var(--afstand-klein));}
 
 section#mandala {display: flex; justify-content: center; align-items: center;}
@@ -96,7 +96,7 @@ section#mandala a>img:last-of-type{ width: var(--breedte-mandala-klein); height:
 section#mandala a:hover>img:last-of-type {opacity: 0.5; transition: opacity 3s ease-in;}
 
 section.afbeelding {width: 100%; display: flex; justify-content: center; padding: var(--afstand-groot) 0;}
-section.afbeelding img {width: 100%;} 
+section.afbeelding img {max-width: 100%; max-height: 100%;} 
 @media screen and (min-width: 690px) {
     section.afbeelding img {max-width: var(--breedte-mandala); }
 }
