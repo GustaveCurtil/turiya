@@ -15,9 +15,10 @@
 }
 
 @media screen and (min-width: 690px) {
-    html {font-size: 20px;}
+    html {font-size: 18px;}
     :root {
         --breedte-mandala: 28rem;
+        --breedte-mandala-klein: 20rem;
     }
 
 }
@@ -38,9 +39,9 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-body#inspiraties {background-image: url(media/schors2.jpg); background-size: contain;}
+body#inspiraties {background-image: url(media/schors.jpg); background-size: contain;}
 body#inspiraties main {padding: var(--afstand-klein) var(--afstand-groot);}
-body#inspiraties div#container {width: 100%; columns: 4 400px; column-gap: var(--afstand-groot);}
+body#inspiraties div#container {width: 100%; columns: 5 300px; column-gap: var(--afstand-groot);}
 body#inspiraties div#container>section {width: 100%;  break-inside: avoid;
   page-break-inside: avoid; /* for print */
   -webkit-column-break-inside: avoid; }
@@ -51,19 +52,6 @@ body#inspiraties div#container section.afbeelding img {width: 100%; max-width: 1
 body#inspiraties h1 {padding: 0 var(--afstand-klein);}
 body#inspiraties nav a {width: auto;}
 body#inspiraties nav {width: auto; padding: var(--afstand-klein); margin: var(--afstand-klein);}
-body#inspiraties>section:first-of-type {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-body#inspiraties section:first-of-type *:not(img) {
-    padding: 0 var(--afstand-klein);
-    font-weight: 600;
-}
-body#inspiraties section:first-of-type h2 {font-size: 1.8rem;}
-body#inspiraties section:first-of-type a {
-    margin-bottom: var(--afstand-klein);
-}
 
 
 header {
@@ -105,7 +93,7 @@ section#mandala a:hover>img:last-of-type {opacity: 0.5; transition: opacity 3s e
 section.afbeelding {width: 100%; display: flex; justify-content: center; padding: var(--afstand-groot) 0;}
 section.afbeelding img {max-width: 100%; max-height: 100%;} 
 @media screen and (min-width: 690px) {
-    section.afbeelding img {max-width: var(--breedte-mandala); }
+    section.afbeelding img {max-width: calc(var(--breedte-max) - 2 * var(--afstand-groot)); }
 }
 p {width: 100%; text-align: left; margin: var(--afstand-klein) 0;}
 section.centreren p {text-align: center;}
@@ -116,5 +104,5 @@ section#mandala a>img {width: var(--breedte-mandala-klein); -webkit-animation:sp
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-footer {width: 100%; max-width: var(--breedte-max); height: var(--hoogte-footer); margin: 0 auto; display: flex; align-items: center; padding: 0 var(--afstand-klein);}
+footer {width: 100%; height: var(--hoogte-footer); margin: 0 auto; display: flex; align-items: center; padding: 0 var(--afstand-klein);}
 footer p { font-size: 0.9rem; text-align: center; font-weight: 300;}
