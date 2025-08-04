@@ -81,6 +81,8 @@ section.vullen {min-height: calc(100svh); display: flex; flex-direction: column;
 section.vullen.boven {height: calc(100svh - var(--hoogte-header) - var(--afstand-klein)); min-height: auto;}
 section.vullen.beneden {min-height: calc(100svh - var(--hoogte-footer) - var(--afstand-klein));}
 
+section.bovenruimte {margin-top: var(--afstand-groot);}
+
 section#mandala {display: flex; justify-content: center; align-items: center;}
 #landing section#mandala a {width: var(--breedte-mandala); height: var(--breedte-mandala);}
 section#mandala a { border-radius: 50%; display: block; width: var(--breedte-mandala-klein); height: var(--breedte-mandala-klein);}
