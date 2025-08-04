@@ -25,10 +25,11 @@
 
 h1 {font-size: 4rem; font-family: "Slackside One", cursive;}
 h2 {padding-bottom: calc(var(--afstand-klein)/2); font-size: 1.4rem; color: var(--kleur-tekst2); font-weight: 600;}
-a:not(.actief) {color: var(--kleur-tekst2); cursor: url('/lotus.cur'), auto;}
-a:not(h1 a, .actief), span.kleur {animation: gloeien 3s linear infinite alternate;}
+h3 {font-family: "Slackside One", cursive; color: var(--kleur-tekst2);}
+a:not(.actief), u {color: var(--kleur-tekst2); cursor: url('/lotus.cur'), auto;}
+a:not(h1 a, .actief), span.kleur, u {animation: gloeien 3s linear infinite alternate;}
 p {font-size: 1rem; line-height: 1.4rem;} 
-@keyframes gloeien { 100% { color: rgb(117, 72, 0); } }
+@keyframes gloeien { 100% { color: rgb(163, 101, 1); } }
 
 body {
     width: 100vw;
@@ -66,7 +67,7 @@ header {
     padding: 0 var(--afstand-klein);
 }
 
-h1 a {text-decoration: none; color: var(--kleur-tekst2);}
+header h1 a {text-decoration: none; color: var(--kleur-tekst2);}
 
 nav {width: 100%; max-width: var(--breedte-max); display: flex; justify-content:space-evenly;}
 nav a {width: calc(100% / 3); text-align: center; font-size: 1.1rem;}
