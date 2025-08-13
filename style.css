@@ -34,7 +34,7 @@ p {font-size: 1rem; line-height: 1.4rem;}
 @keyframes gloeien { 100% { color: rgb(163, 101, 1); } }
 @keyframes gloeien2 { 100% { background-color: rgb(163, 101, 1); } }
 
-#afspraak {position: fixed; bottom: var(--hoogte-footer); display: flex; height: var(--hoogte-footer); justify-content: center; align-items: center;z-index: 150;}
+#afspraak {position: fixed; bottom: var(--hoogte-footer); min-width: calc(100vw - 2 * var(--afstand-klein)); display: flex; height: var(--hoogte-footer); justify-content: center; align-items: center;z-index: 150;}
 #afspraak-placeholder {height: calc(var(--hoogte-footer) - var(--afstand-klein));}
 
 body {
