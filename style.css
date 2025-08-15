@@ -28,8 +28,8 @@ h2 {padding-bottom: calc(var(--afstand-klein)/2); font-size: 1.4rem; color: var(
 h3 {font-family: "Slackside One", cursive; color: var(--kleur-tekst2);}
 a:not(.actief), u {color: var(--kleur-tekst2); cursor: url('/lotus.cur'), auto;}
 a:not(h1 a, .actief), span.kleur, u {animation: gloeien 3s linear infinite alternate;}
-a.button {width: fit-content; background-color: var(--kleur-tekst2); cursor: url('/lotus.cur'), auto; border: 0; padding: 0.4rem 0.8rem;  color: var(--kleur-achtergrond); display: block; font-weight: 500;}
-a.button {animation: gloeien2 6s linear infinite alternate;}
+a.button {width: fit-content; background-color: var(--kleur-tekst2); cursor: url('/lotus.cur'), auto; border: 0; padding: 0.4rem 0.8rem; border-radius: 20rem; color: var(--kleur-achtergrond); display: block; font-weight: 500;}
+a.button {animation: gloeien2 2s linear infinite alternate;}
 p {font-size: 1rem; line-height: 1.4rem;} 
 @keyframes gloeien { 100% { color: rgb(163, 101, 1); } }
 @keyframes gloeien2 { 100% { background-color: rgb(163, 101, 1); } }
